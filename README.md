@@ -55,3 +55,7 @@ Gunakan harga per unit dalam mata uang buku dan kode yang sama dengan posisi. My
 - Untuk membangun versi Worker, gunakan Node 22.13+ dan jalankan `npm ci`, lalu `npm run build`. Untuk pengembangan gunakan `npm run dev`. Pada deployment terpisah sediakan binding D1 `DB`, terapkan migrasi SQL di `drizzle/`, dan gunakan autentikasi hosting tepercaya yang memasok identitas pengguna ke API. Jangan mengekspos Worker dengan header identitas yang dapat ditetapkan sembarang klien. Server desktop siap dipakai lokal tanpa infrastruktur tersebut.
 - `python3 scripts/package-desktop.py /folder/keluaran` membuat ZIP aplikasi dari source.
 - Lihat `ANALISIS.md` untuk pemetaan terhadap referensi dan bagian yang tidak bisa diverifikasi dari akun.
+
+### Vercel
+
+Impor repositori GitHub ke Vercel dan gunakan `main` sebagai cabang produksi. Build di `vercel.json` menjalankan tes perhitungan sebelum menerbitkan versi web. Buku pribadi tersimpan di browser pada perangkat yang digunakan. Sinkronisasi D1, feed harga otomatis, dan model AI eksternal memerlukan versi server.

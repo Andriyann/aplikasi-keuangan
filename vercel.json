@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "",
+  "buildCommand": "node --test tests/finance.test.cjs && node scripts/build-vercel.mjs",
+  "outputDirectory": "dist/vercel",
+  "redirects": [
+    { "source": "/", "destination": "/myuang.html", "permanent": false }
+  ]
+}
